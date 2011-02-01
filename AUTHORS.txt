@@ -1,0 +1,2 @@
+The main author of this plugin is:
+ * Ildefonso Montero Perez - ildefonso.montero@gmail.com

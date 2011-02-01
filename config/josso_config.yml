@@ -1,0 +1,27 @@
+development:
+    enabled: true
+    josso_root: http://localhost:8080/josso/
+    partner_application_entry_url: http://localhost:81/redmine/login/
+    session_timer: 1800
+    josso_identity_manager: services/SSOIdentityManagerSoap
+    josso_identity_provider: services/SSOIdentityProviderSoap
+    josso_session_manager: services/SSOSessionManagerSoap
+    josso_ws_timeout: 3000000
+test:
+    enabled: true
+    josso_root: http://localhost:8080/josso/
+    partner_application_entry_url: http://localhost:81/redmine/login/
+    session_timer: 1800
+    josso_identity_manager: services/SSOIdentityManagerSoap
+    josso_identity_provider: services/SSOIdentityProviderSoap
+    josso_session_manager: services/SSOSessionManagerSoap
+    josso_ws_timeout: 3000000
+production:
+    enabled: true
+    josso_root: http://localhost:8080/josso/
+    partner_application_entry_url: http://localhost:81/redmine/login/
+    session_timer: 1800
+    josso_identity_manager: services/SSOIdentityManagerSoap
+    josso_identity_provider: services/SSOIdentityProviderSoap
+    josso_session_manager: services/SSOSessionManagerSoap
+    josso_ws_timeout: 3000000

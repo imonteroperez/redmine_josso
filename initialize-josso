@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# initialize-josso <gem-command-path> <gems-path>
+
+case $# in
+2) ;;
+*) echo "Use: $0 <gem-command-path> <gems-path>"
+   exit;;
+esac
+
+echo "* Installing josso-client gem ..."
+echo "  > $1 install --local config/initializers/resources/josso-client-0.1.6.gem"
+echo ""
+$1 install --local config/initializers/resources/josso-client-0.1.6.gem
+
+echo "* Setting up josso-client gem ..."
+echo "  > cp -a lib/jossoclient/* $2/josso-client-0.1.6/."
+echo ""
+# Elimino los ficheros del cliente original
+rm -rf $2/josso-client-0.1.6/*
+# Copio el contenido de mi cliente
+cp -a lib/jossoclient/* $2/josso-client-0.1.6/.
+
+echo "------------------------------------------------------------------"
+echo " SUCCESS"
+echo "  Details: Redmine JOSSO Plugin configured."
+echo "------------------------------------------------------------------"
+echo ""
